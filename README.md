@@ -7,7 +7,7 @@ ZH | [EN](./README-en.md)
 
 [![license](https://img.shields.io/badge/license-Apache 2.0-navy)](./LICENSE) [![HuggingFace](https://img.shields.io/badge/🤗-Huggingface-#0000CD.svg)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM) [![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()[![Generic badge](https://img.shields.io/badge/🤗-Huggingface%20Repo-green.svg)](https://huggingface.co/ShengbinYue/DISC-LawLLM)
 
-
+[![HuggingFace](https://img.shields.io/badge/🤗-Huggingface-#0000CD.svg)]()
 
 </div>
 
