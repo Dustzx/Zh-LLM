@@ -3,11 +3,9 @@
 ZH | [EN](./README-en.md)
 
 <h1>郑和海事大模型（Zh-MT-LLM）</h1>
-
 ![Zh-logo](imgs/Zh-logo.png)
 
-[![Static Badge](https://img.shields.io/badge/license-Apache%202.0-royalblue)
-](./LICENSE)
+[![Static Badge](https://img.shields.io/badge/license-Apache%202.0-royalblue)](./LICENSE)
 [![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-royalblue)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)
 [![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()
 
