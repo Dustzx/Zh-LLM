@@ -6,10 +6,10 @@ ZH | [EN](./README-en.md)
 
 ![Zh-logo](imgs/Zh-logo.png)
 
-[![license](https://img.shields.io/badge/license-Apache%202.0-navy)](./LICENSE)
-[![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-%230000CD)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)
+[![Static Badge](https://img.shields.io/badge/license-Apache%202.0-royalblue)
+](./LICENSE)
+[![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-royalblue)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)
 [![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()
-![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-royalblue)
 
 </div>
 
