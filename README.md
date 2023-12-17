@@ -3,10 +3,10 @@
 ZH | [EN](./README-en.md)
 
 <h1>郑和海事大模型（Zh-MT-LLM）</h1>
-![Zh-logo](imgs/Zh-logo.jpg)
-
-[![license](https://img.shields.io/badge/license-Apache%202.0-navy)](./LICENSE) [![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-%230000CD)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM) [![demo](https://img.shields.io/badge/💻-Demo-230000CD )]()
-
+![Zh-logo](imgs/Zh-logo.png)
+[![license](https://img.shields.io/badge/license-Apache%202.0-navy)](./LICENSE) [![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-%230000CD)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM) [![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()
+![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-royalblue)
+![Static Badge](https://img.shields.io/badge/license-Apache%202.0-royalblue)
 </div>
 
 郑和海事大模型（Zh-MT-LLM）是大连海事大学智能技术实验室开发的一个面向海事领域从业人员、培训人员和学生，提供海事法律法规问答、海事教育培训、海事专业知识问答的垂直领域海事大模型。
