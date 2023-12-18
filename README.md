@@ -14,9 +14,6 @@ ZH | [EN](./README-en.md)
 
 [![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()
 
-
-
-
 </div>
 
 郑和海事大模型（Zh-MT-LLM）是大连海事大学智能技术实验室开发的一个面向海事领域从业人员、培训人员和学生，提供海事法律法规问答、海事教育培训、海事专业知识问答的垂直领域海事大模型。
