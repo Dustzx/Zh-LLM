@@ -1,16 +1,14 @@
 <div align="center">
-[ZH ]((. /README.md))| EN
+
+[ZH](. /README.md)| EN
 
 <h1>Zhenghe Maritime Large Language Model (Zh-MT-LLM)</h1>
 
 ![Zh-logo](imgs/zh4.png)
 
 [![Static Badge](https://img.shields.io/badge/license-Apache%202.0-royalblue)](./LICENSE)
-
 [![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-royalblue)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)
-
 [![Generic badge](https://img.shields.io/badge/微信-ITREC-royalblue?logo=wechat)]()
-
 [![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()
 
 </div>
