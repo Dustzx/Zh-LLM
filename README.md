@@ -333,7 +333,7 @@ torchrun --nproc_per_node=2 train_qlora.py --train_args_file train_args/qlora/ch
 - [Firefly](https://github.com/yangjianxin1/Firefly)
 - [DISC-LawLLM](https://github.com/FudanDISC/DISC-LawLLM)
 - [CrimeKgAssitant](https://github.com/liuhuanyong/CrimeKgAssitant)
-- 本项目Logo由DALL·E 3生成后，经过人工处理制作完成。
+- 本项目Logo由DALL·E 3生成后，经过人工修改制作完成。
 
 ## Star History
 
