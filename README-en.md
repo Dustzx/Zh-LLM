@@ -1,126 +1,132 @@
 <div align="center">
+[ZH ]((. /README.md))| EN
 
-ZH | [EN](./README-en.md)
+<h1>Zhenghe Maritime Large Language Model (Zh-MT-LLM)</h1>
 
-<h1>郑和海事大模型（Zh-MT-LLM）</h1>
-![Zh-logo](imgs/Zh-logo.jpg)
-[![license](https://img.shields.io/badge/license-Apache 2.0-navy)](./LICENSE)[![HuggingFace](https://img.shields.io/badge/🤗-Huggingface%20Repo-#0000CD.svg)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)[![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()
+![Zh-logo](imgs/zh4.png)
 
+[![Static Badge](https://img.shields.io/badge/license-Apache%202.0-royalblue)](./LICENSE)
 
+[![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-royalblue)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)
+
+[![Generic badge](https://img.shields.io/badge/微信-ITREC-royalblue?logo=wechat)]()
+
+[![demo](https://img.shields.io/badge/💻-Demo-royalblue )]()
 
 </div>
 
-郑和海事大模型（Zh-MT-LLM）是大连海事大学智能技术实验室开发的一个面向海事领域从业人员、培训人员和学生，提供海事法律法规问答、海事教育培训、海事专业知识问答的垂直领域海事大模型。
+Zheng He Maritime Large Language Model (Zh-MT-LLM) is a vertical domain maritime Large Language Model developed by the Intelligent Technology Laboratory of Dalian Maritime University for practitioners, trainers and students in the maritime field, providing questions and answers on maritime laws and regulations, maritime education and training, and questions and answers on maritime expertise.
 
-对应以上三大板块,模型具有以下三大特点：
+Corresponding to the above three segments, our model has the following three main characteristics:
 
-- 海事法律法规问答：模型从大量的海事相关法律法规内容中学习到了涉及海事领域的法律知识，可以为海事领域相关人员提供咨询服务。部分训练数据来源于共计 1.4w 条海事相关的法律法规，涵盖了国际公约、海事类法律、国务院文件、部委文件、行政法规、海事局文件以及司法解释文件等内容。
-- 海事教育培训：首先，模型从来源于网络和教材中的海事专业试题学习到了一部分海事领域教育知识。其次，我们使用各种海事类职业考试大纲，其中包含《海船船员考试大纲》、《船舶载运危险货物申报人员考试大纲》和《危险货物集装箱装箱现场检查人员考试大纲》来生成了大量海事岗位培训知识来训练模型。另外模型还学习了一部分高质量的船员常见问答知识，以供培训人员答疑解惑。
-- 海事各类专业知识问答：面向船舶、港口、海洋、航海等海事专业领域，模型学习了涉及船舶维修、船舶安全管理、港口运营和管理、海运物流、海事安全、航海技术、海洋环境保护、海洋科学研究相关知识，可以为海事各类专业从业人员提供答疑解惑。
+- Maritime Laws and Regulations Q&A: The model learns from a large number of maritime-related laws and regulations content involving the maritime field, and can provide consulting services for people related to the maritime field. Part of the training data comes from a total of 1.4w maritime-related laws and regulations, covering international conventions, maritime laws, documents of the State Council, documents of ministries and commissions, administrative regulations, documents of the Maritime Safety Administration, and judicial interpretation documents.
+- Maritime Education and Training: Firstly, the model learns a part of the education knowledge in the maritime field from the maritime professional test questions originating from the Internet and textbooks. Secondly, we use various maritime vocational examination syllabi, including 《Marine Crew Examination Syllabus》, 《Ship Carrying Dangerous Goods Declarant Examination Syllabus》and 《Dangerous Goods Container Container On-site Inspector Examination Syllabus》, to generate a large amount of maritime job training knowledge to train the model. In addition, the model also learns a part of high-quality crew common question and answer knowledge for trainers to answer questions and solve puzzles.
+- Maritime Expertise Q&A: for ships, ports, oceans, navigation and other maritime professional fields, the model study involves ship maintenance, ship safety management, port operation and management, maritime logistics, maritime security, navigation technology, marine environmental protection, marine scientific research related knowledge, can provide all kinds of professional practitioners in the maritime industry to answer the questions and solve the puzzles.
 
-本项目将陆续开源一系列**海事领域指令微调数据**和**海事大模型权重**，助力海事大模型的研究。
+This project will successively open source a series of **Maritime domain command fine-tuning data** and **Maritime big model weights** to help the research of maritime big model.
 
-## 新闻 ✨
+## News ✨
 
-[2023/12/18] 正式发布郑和海事大模型（Zh-MT-LLM），并开源[Zh-MT-LLM v1.0模型](https://huggingface.co/ZhangFuXi/Zh-MT-LLM/tree/main)，以及该版本的 [LoRA模型权重](https://huggingface.co/ZhangFuXi/Zh-MT-LLM/tree/main/Zh-MT-LLM-lora)
+[2023/12/18] Official release of the Zhenghe Maritime Large Language Model (Zh-MT-LLM) and open source of the [Zh-MT-LLM v1.0 model](https://huggingface.co/ZhangFuXi/Zh-MT-LLM/tree/main), as well as the [LoRA model weights]( https://huggingface.co/ZhangFuXi/Zh-MT-LLM/tree/main/Zh-MT-LLM-lora) for this version 
 
 
 
-## 功能展示
+## Showcase of features
 
-#### 海事法律法规问答
+#### Maritime Laws and Regulations Q&A
 
-| 问题                                                     | Zh-MT-LLM                                                    |
+| questions | Zh-MT-LLM |
 | -------------------------------------------------------- | :----------------------------------------------------------- |
-| SOLAS公约是什么？它对海上移动业务有哪些相关要求？        | SOLAS公约是国际海上人命安全公约（International Convention for the Safety of Life at Sea）的简称。它是国际海事组织（IMO）制定的一项重要公约，旨在确保海上船只和船员的安全。SOLAS公约对海上移动业务（如卫星通信、无线电台等）也提出了相关要求。\n\n具体来说，SOLAS公约规定了船只必须配备的必要设备，包括卫星通信设备、无线电台、雷达、自动识别系统等。此外，公约还规定了船只必须进行定期维护和检查，以确保这些设备的正常运行。\n\n此外，SOLAS公约还规定了船只必须配备的必要人员，包括船长、船员、通信员等。这些人员必须接受相应的培训，以确保他们能够熟练地操作和维护设备，并能够在紧急情况下采取适当的措施。\n\n总之，SOLAS公约对海上移动业务提出了严格的要求，旨在确保船只和船员的安全。这些要求的实施对于保障海上通信和运输的安全至关重要。 |
-| 请解释《船员违法记分办法》的主要内容和适用范围。         | 《船员违法记分办法》是中国海事局颁布的一项法规，旨在对船员的违法行为进行记分，并规定相应的记分标准和处罚措施。其主要内容包括：\n\n1. 记分标准和处罚措施：船员违法行为会被记分，根据不同的违法行为，记分的分值也会不同。记分达到一定程度后，船员将面临相应的处罚，包括罚款、暂扣执照、吊销执照等。\n\n2. 记分周期：船员的记分周期为一年，每年初开始，到次年的同一天结束。\n\n3. 记分记录和查询：船员的记分记录将永久保留，并可以通过中国海事局官方网站进行查询。\n\n4. 记分申诉：船员可以在一定时间内对记分进行申诉，申诉结果将由中国海事局进行裁定。\n\n适用范围：《船员违法记分办法》适用于所有在中国境内从事航海活动的船员，包括海员、船长、船员等。 |
-| 轮机值班船员在执行任务时发现机舱油污水外泄，该如何处理？ | 根据《中华人民共和国内河船舶船员值班规则》，值班轮机员应当随时注意机舱油污水外泄。如果一名轮机值班船员在执行任务时发现机舱油污水外泄，他应该立即采取措施进行处理。\n\n首先，他应该立即向轮机长报告情况，并提供详细的外泄情况描述。轮机长会根据情况做出相应的指示，如停止作业、调整船舶姿态等，以防止进一步的污染。\n\n其次，值班轮机员应尽快采取措施进行应急处理。他可以尝试使用适当的设备进行油污水的收集和处理，如油水分离器、油水回收装置等。同时，他也可以尝试使用吸油材料进行油污水的吸附和清除。\n\n最后，值班轮机员应密切监测机舱油污水的处理情况，并及时向轮机长汇报处理进展。轮机长会根据情况调整处理方案，并确保机舱油污水得到有效处理，以避免对环境造成污染。\n\n总之，值班轮机员在发现机舱油污水外泄时，应立即采取措施进行处理，并向轮机长报告情况，确保机舱油污水得到及时处理，以保护环境和船舶的安全。 |
+| What is the SOLAS Convention? What are the requirements related to mobile operations at sea?        | The SOLAS Convention stands for the International Convention for the Safety of Life at Sea, an important convention developed by the International Maritime Organization (IMO) to ensure the safety of ships and crews at sea. It is an important convention developed by the International Maritime Organization (IMO) to ensure the safety of ships and crews at sea. the SOLAS Convention also imposes relevant requirements on mobile operations at sea (e.g. satellite communications, radio stations, etc.). \n\nSpecifically, the SOLAS Convention stipulates the necessary equipment that ships must be equipped with, including satellite communication equipment, radios, radar, automatic identification systems, etc. The SOLAS Convention also stipulates that ships must be equipped with the necessary equipment, including satellite communication equipment, radios, radar, and automatic identification systems. In addition, the convention also stipulates that vessels must undergo regular maintenance and inspection to ensure the proper functioning of such equipment. \n\nIn addition, the SOLAS Convention also stipulates the necessary personnel that ships must have, including captains, crew members, communicators, and so on. These personnel must receive appropriate training to ensure that they are proficient in operating and maintaining the equipment and are able to take appropriate measures in case of emergency. \n\n In conclusion, the SOLAS Convention imposes stringent requirements on maritime mobile operations aimed at ensuring the safety of vessels and crews. The implementation of these requirements is essential to ensure the safety of maritime communications and transportation. |
+| Please explain the main content and scope of application of the Scheme on Points for Seafarers' Violations.         | The Measures for Recording Points for Seafarers' Violations of the Law is a regulation issued by the China Maritime Safety Administration (CMSA), which aims to record points for seafarers' violations of the law, and to stipulate the corresponding point-recording standards and penalties. Its main contents include:\n\n1. Demerit Points Standard and Penalty Measures: Crew members will be given demerit points for violations, and the value of demerit points will be different depending on different violations. After the demerit points reach a certain level, the crew will face corresponding penalties, including fines, suspension of license, revocation of license, etc. \n\n2. Demerit points cycle: The demerit points cycle for crew members is one year, starting at the beginning of each year and ending on the same day of the following year. \n\n3. Points Record and Enquiry: The points record of a crew member will be kept permanently and can be enquired through the official website of China Maritime Safety Administration. \n\n4. Appeal against demerit points: Crew members can appeal against demerit points within a certain period of time, and the result of the appeal will be adjudicated by the Maritime Safety Administration of China (MSAC). \n\nScope of application: The Measures on Demerit Points for Seafarers' Violations are applicable to all seafarers engaged in seafaring activities within the territory of China, including seafarers, masters and crew members. |
+| What should the crew on watch of an engine do if they notice a leakage of oily water in the engine room while performing their duties? | According to the "Rules of the People's Republic of China on Crew Duty of Inland Waterway Vessels", engineers on duty should pay attention to the leakage of bilge oil and sewage at all times. If an engine duty crew member discovers a leakage of engine room oily water while performing his duties, he should take immediate measures to deal with it. \n\nFirst, he should immediately report the situation to the chief engine officer and provide a detailed description of the spillage. The Engineer-in-Charge will give appropriate instructions according to the situation, such as stopping the operation, adjusting the ship's attitude, etc., to prevent further contamination. \n\nSecondly, the Engineer on duty should take measures to deal with the emergency as soon as possible. He may try to use appropriate equipment for the collection and treatment of oily sewage, such as oil-water separators and oil-water recovery devices. At the same time, he can also try to use oil-absorbing materials for the adsorption and removal of oily sewage. \n\nFinally, the duty engineman should closely monitor the treatment of oily water in the engine room and report the progress of treatment to the chief engineer in a timely manner. The Chief Engineer will adjust the treatment program according to the situation and ensure that the engine room oily water is effectively treated in order to avoid pollution to the environment. \n\\n In conclusion, the duty engineers should take immediate measures to deal with the leakage of engine room oily water when it is detected and report the situation to the Chief Engineer to ensure that the engine room oily water is dealt with in a timely manner in order to protect the environment and the safety of the ship. |
 
 
 
-#### 海事教育培训
+#### Maritime Education and Training
 
-| 问题                                                         | Zh-MT-LLM                                                    |
-| :----------------------------------------------------------- | ------------------------------------------------------------ |
-| 烟烙烬IG-541属于哪种类型的灭火剂？                           | 烟烙烬IG-541是一种洁净气体灭火剂，属于惰性气体灭火剂的范畴。它由氮气、二氧化碳和氩气组成，通过排除空气中的氧气来扑灭火源。这种灭火剂对环境和人体都是安全的，不会留下任何残留物。 |
-| 如何正确穿戴和使用防护服以确保海员的安全？                   | 防护服在海事领域中起着至关重要的作用，它们能够保护海员免受有害物质、危险环境和传染病的侵害。以下是正确穿戴和使用防护服的几个关键步骤：\n\n1. 了解防护服类型：根据不同的任务和环境，防护服可以分为多种类型，如防护手套、防护服、护目镜、呼吸器等。海员应该了解不同类型的防护服，并选择适合特定任务的防护装备。\n\n2. 检查和维护：在使用防护服之前，海员应该仔细检查其外观和完整性。任何破损、损坏或不符合标准的防护服都应被淘汰。此外，防护服应定期进行维护和清洁，以确保其性能和防护能力。\n\n3. 穿戴正确：海员应该按照防护服的使用说明正确穿戴防护服。这可能包括佩戴手套、护目镜、呼吸器等。穿戴时应注意舒适性和紧固性，以确保防护服能够有效地保护身体。\n\n4. 使用正确的配件：海员应该使用正确的配件，如防护手套、护目镜、呼吸器等。这些配件应与防护服相匹配，以确保最佳的防护效果。\n\n5. 定期更换：防护服的寿命有限，海员应该定期更换防护服。一般来说，防护服的更换周期取决于其使用频率、环境条件和防护等级。海员应根据需要及时更换防护服，以确保其有效性。\n\n总之，正确穿戴和使用防护服是海员保护自身安全的重要步骤。海员应该了解防护服的类型和功能，正确穿戴和使用防护服，并定期更换以确保其有效性和安全性。 |
-| 听说三副考试成绩可以作为值班水手考试成绩，具体是怎么样的？   | 根据《中华人民共和国海船船员适任考试和发证规则》的规定，三副考试成绩可以作为值班水手考试成绩，但前提是该三副考试成绩合格。具体来说，根据该规则的规定，三副考试成绩合格的可以作为值班水手考试成绩。 |
-| 以下为一道多选题，请给出答案\n提单是指用以证明海上运输合同和由承运人接管或装载货物，以及承运人保证据以支付货物的单证，是班轮运输中的重要法律文件。有关提单的下列表述，正确的有:  \nA.提单只是运输合同的证明而非运输合同本身  \nB.提单在托运人手中时只是承运人接收货物的初步证据，如果承运人有确实证据证明其收到的货物与提单上的记载不符，承运人可以向托运人提出异议。但对于提单受让人来说，提单就成了终结性证据  \nC.银行一般只接受已装船提单，即由船长或承运人的代理人在货物装上指定的船舶后签发的提单 D.提单中注明的装船日期早于实际装船日期的称为预借提单 | A.提单只是运输合同的证明而非运输合同本身  \n\nB.提单在托运人手中时只是承运人接收货物的初步证据，如果承运人有确实证据证明其收到的货物与提单上的记载不符，承运人可以向托运人提出异议。但对于提单受让人来说，提单就成了终结性证据\n\nC.银行一般只接受已装船提单，即由船长或承运人的代理人在货物装上指定的船舶后签发的提单 |
-
-
-
-#### 海事各类专业知识问答
-
-| 问题                                                         | Zh-MT-LLM                                                    |
+| questions                                                    | Zh-MT-LLM                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 船舶操纵中常用的相关用语有哪些？请列举并解释其含义。         | 船舶操纵中常用的相关用语如下：\n\n1. 舵角：指舵柄或舵轮转动的角度，通常以度数表示。\n\n2. 舵速：指舵角变化的速度，通常以度数每分钟表示。\n\n3. 船速：指船舶在单位时间内所行驶的距离，通常以海里/小时表示。\n\n4. 航向：指船舶相对于地面的方向，通常以度数表示。\n\n5. 舵角指令：指船舶操纵员对舵角变化的要求，通常以度数表示。\n\n6. 舵角反馈：指舵角变化后舵柄或舵轮的位置，通常以度数表示。\n\n7. 船速反馈：指船舶实际行驶速度与船速之间的差异，通常以海里/小时表示。\n\n8. 航向反馈：指船舶实际航向与航向指令之间的差异，通常以度数表示。\n\n9. 舵角调整：指船舶操纵员对舵角变化进行调整，以使船舶按照指令行驶。\n\n10. 舵角修正：指船舶操纵员对舵角变化进行修正，以使船舶按照指令行驶，同时避免船舶受到风浪等因素的影响。 |
-| 静电知识在油船运输中的重要性及应对措施是什么？               | 静电在油船运输中是一个非常重要的问题，因为油船在装卸油时会产生大量的静电。静电可以引起火灾和爆炸，因此必须采取适当的措施来防止静电的产生和积累。\n\n以下是一些常见的静电产生和积累的途径：\n\n1. 油品在装卸过程中的摩擦和碰撞。\n\n2. 油品在管道和储罐中的流动。\n\n3. 油品在油船船舱中的流动。\n\n4. 油船船舱内的金属结构和其他导电材料。\n\n以下是一些应对措施：\n\n1. 使用防静电材料和设备，如防静电地板、防静电垫、防静电手套、防静电衣服等。\n\n2. 在装卸油品时，使用防静电接地装置，将静电导入地面。\n\n3. 在油船船舱内安装防静电装置，如防静电油舱、防静电泵等。\n\n4. 在油船船舱内设置防静电涂料，如防静电涂料、防静电涂料、防静电涂料等。\n\n5. 在油船船舱内设置防静电管道和储罐，以减少静电的积累。\n\n6. 在油船船舱内设置防静电设备，如防静电泵、防静电阀等，以减少静电的产生。\n\n7. 在油船船舱内设置防静电接地装置，将静电导入地面。\n\n总之，静电在油船运输中是一个非常重要的问题，必须采取适当的措施来防止静电的产生和积累。 |
-| 如何正确使用雷达进行避碰？                                   | 雷达是船舶上非常重要的导航工具，可以帮助船员识别其他船只、障碍物和危险区域。在海上航行时，正确使用雷达进行避碰是非常重要的。以下是一些使用雷达进行避碰的技巧：\n\n1. 设置合适的雷达范围：雷达范围应该根据船舶的大小和周围环境来设置。如果船舶太小，雷达范围应该设置为较小的范围，以减少干扰和误差。\n\n2. 监控雷达屏幕：在航行中，船员应该时刻监控雷达屏幕，以保持警觉。如果发现其他船只或障碍物，应该立即采取行动。\n\n3. 识别目标：在雷达屏幕上，船员应该能够识别出其他船只或障碍物。这可以通过观察雷达屏幕上的回波来完成。如果目标距离太远，船员应该尝试增加雷达范围，以更好地识别目标。\n\n4. 计算距离和速度：船员应该能够计算出其他船只或障碍物与自己的距离和速度。这可以通过观察雷达屏幕上的距离和速度信息来完成。\n\n5. 采取行动：如果发现其他船只或障碍物，船员应该立即采取行动。这可能包括改变航向、速度或距离目标。船员应该始终保持警觉，并时刻准备采取行动。\n\n总之，正确使用雷达进行避碰需要船员具备良好的观察力和判断力。船员应该时刻保持警觉，并时刻准备采取行动。 |
-| 如何解决海洋酸化对珊瑚礁生态系统的影响？                     | 海洋酸化对珊瑚礁生态系统的影响是非常严重的，因为酸化会导致海水中的碳酸盐浓度下降，使得珊瑚礁骨骼中的碳酸钙溶解，从而导致珊瑚白化、死亡等问题。以下是一些可能的解决方案：\n\n1. 减少温室气体排放：温室气体的排放是导致海洋酸化的主要原因之一，因此减少温室气体的排放是解决海洋酸化问题的根本途径。\n\n2. 保护珊瑚礁：珊瑚礁是海洋生态系统的重要组成部分，因此需要采取措施来保护珊瑚礁，如建立保护区、限制捕捞等。\n\n3. 研究珊瑚的适应性：科学家们正在研究珊瑚的适应性，以了解它们如何应对酸化的环境，并寻找新的方法来保护珊瑚礁。\n\n4. 改善水质：改善水质可以减少酸化对珊瑚礁的影响，因此需要采取措施来减少污染和过度捕捞等。\n\n5. 加强国际合作：海洋酸化是全球性的问题，需要加强国际合作，共同应对这个问题。 |
-| 在海事安全中，什么是VTS（船舶交通服务）系统，它的作用是什么？ | VTS（船舶交通服务）系统是一种用于监控和管理船舶交通的系统。它通过使用雷达、IS（自动识别系统）和其他传感器来跟踪船舶的位置、航向和速度等信息，并提供实时的船舶交通信息和建议。VTS系统可以帮助船舶避免碰撞、优化船舶交通流量、提高船舶安全性和减少排放。此外，VTS系统还可以提供紧急情况下的援助和救援服务。 |
+| What type of extinguishing agent does Smoke and Embers IG-541 belong to? | IG-541 is a clean gas fire extinguishing agent, which belongs to the category of inert gas fire extinguishing agent. It consists of nitrogen, carbon dioxide and argon, and extinguishes fires by removing oxygen from the air. This extinguishing agent is safe for the environment and human body, and does not leave any residue. |
+| How to wear and use protective clothing correctly to ensure the safety of seafarers? | Protective clothing plays a vital role in the maritime sector by protecting seafarers from harmful substances, hazardous environments and infectious diseases. Here are a few key steps for the correct donning and use of protective clothing:\n\n1. Understand the type of protective clothing: Depending on the task and the environment, protective clothing can be categorized into a number of types, such as protective gloves, gowns, goggles, respirators, and so on. Seafarers should be aware of the different types of protective clothing and select protective equipment suitable for the particular task. \n\2. Inspection and maintenance: Before using protective clothing, seafarers should carefully inspect its appearance and integrity. Any protective clothing that is torn, damaged or not up to standard should be eliminated. In addition, protective clothing should be maintained and cleaned regularly to ensure its performance and protection. \n\n3. wear correctly: Seafarers should wear protective clothing correctly in accordance with the instructions for its use. This may include wearing gloves, goggles, respirators, etc. It should be worn for comfort and fastening to ensure that the suit protects the body effectively. \n\n4. use the correct accessories: seafarers should use the correct accessories such as protective gloves, goggles, respirators etc. These accessories should be matched to the protective clothing to ensure optimum protection. \n\5. Replace regularly: Protective clothing has a limited lifespan and seafarers should replace their protective clothing on a regular basis. In general, the replacement cycle of protective clothing depends on its frequency of use, environmental conditions and level of protection. Seafarers should replace protective clothing as often as necessary to ensure its effectiveness. \n\n In conclusion, the correct wearing and use of protective clothing is an important step for seafarers to protect their safety. Seafarers should be aware of the type and function of protective clothing, wear and use it correctly, and change it regularly to ensure its effectiveness and safety. |
+| I have heard that the third mate's examination results can be used as the examination results of the sailor on duty, how is it exactly? | According to the "Rules of the People's Republic of China for the Competency Examination and Certification of Seafarers", the third mate's examination result can be used as the examination result for the duty seaman, but only if the third mate's examination result is qualified. Specifically, according to the provisions of the Rules, the third mate's examination results can be used as the examination results of the duty seaman if the third mate's examination results are qualified. |
+| The following is a multiple choice question, please give your answer \nBill of Lading is a document used to prove the contract of carriage by sea and the taking over or loading of the goods by the carrier, as well as the carrier's guarantee to pay for the goods on the basis of it, and is an important legal document in liner transportation. The following statements about the bill of lading are correct: \nA. The bill of lading is only the proof of the contract of carriage rather than the contract of carriage itself \nB. The bill of lading is only prima facie evidence of the carrier's receipt of the goods when it is in the hands of the shipper, and if the carrier has solid proof that the goods it receives do not conform to the entries on the bill of lading, the carrier may raise objections with the shipper. However, for the transferee of the bill of lading, the bill of lading becomes final evidence \nC. Banks generally only accept a loaded bill of lading, i.e., a bill of lading issued by the master of the ship or by the carrier's agent after the goods have been loaded onto the designated ship D. The date of loading of the ship stated in the bill of lading that is earlier than the date of actual loading is known as an advance borrowing bill of lading | A. A bill of lading is only a proof of the contract of carriage rather than a contract of carriage per se \n\nB. The bill of lading, while in the hands of the shipper is only prima facie evidence of the carrier's receipt of the goods, if the carrier has solid evidence that the goods it receives do not conform to what is stated on the bill of lading, the carrier may object to the shipper. But for the transferee of the bill of lading, the bill of lading becomes conclusive evidence \n\nC. Banks generally only accept a loaded bill of lading, i.e., a bill of lading issued by the master of the ship or by the carrier's agent after the goods have been loaded onto the designated ship |
 
-## 模型评测
 
-​	为了更全面地对比郑和海事大模型（Zh-MT-LLM）与通用领域大模型在海事领域内的性能差异。我们从客观题和主观题两个角度出发，构建了两个评测数据集，分别是 Zh-eval-opt 和 Zh-eval-qa。
 
-### 客观题评测
+#### Maritime Expertise Q&A
 
-​	Zh-eval-opt 客观题评测数据集包含800道选择题。题目内容尽可能广地覆盖了海事领域各类专业，同时也包含了船员培训的相关试题。我们使用准确度（Accuracy）来对比模型在该数据集上的性能。
+| questions | Zh-MT-LLM |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| What are the relevant terms commonly used in ship handling? Please list and explain their meanings.         | What are the relevant terms commonly used in ship maneuvering: \n\n1. rudder angle: the angle of rotation of the tiller or rudder wheel, usually expressed in degrees. \n\n2. rudder speed: the speed at which the rudder angle changes, usually expressed in degrees per minute. \n\n3. ship's speed: the distance traveled by a ship in a unit of time, usually expressed in nautical miles per hour. \n\n4. Heading: The direction of a ship relative to the ground, usually expressed in degrees. \n\n5. Rudder Angle Command: refers to the change in rudder angle required by the ship's maneuvering crew, usually expressed in degrees. \n\n6. rudder angle feedback: the position of the tiller or rudder wheel after a change in rudder angle, usually expressed in degrees. \n\n7. ship's speed feedback: the difference between the actual speed the ship is traveling and the ship's speed, usually expressed in nautical miles per hour. \n\n8. heading feedback: the difference between the ship's actual heading and the heading command, usually expressed in degrees. \n\n9. Rudder Angle Adjustment: refers to the adjustment made by the ship's maneuvering officer to the change in rudder angle in order for the ship to travel as instructed. \n\n10. Rudder Angle Adjustment: This refers to the adjustment made by the ship's operator to the change in rudder angle to enable the ship to travel in accordance with the instructions and to prevent the ship from being affected by factors such as wind and waves. |
+| What is the importance of static electricity knowledge in tanker transportation and how to deal with it?               | Static electricity is a very important issue in tanker transportation because tankers generate a lot of static electricity when loading and unloading oil. Static electricity can cause fires and explosions, so appropriate measures must be taken to prevent the generation and accumulation of static electricity. \n\nThe following are some of the common ways in which static electricity is generated and accumulated: \n\n1. friction and collision of oil during loading and unloading. \n\n2. flow of oil in pipelines and tanks. \n\n3. the flow of oil in the tanker's bilge. \n\n4. metallic structures and other electrically conductive materials in the tanker's hold. \n\nThe following are some countermeasures: \n\n1. use of anti-static materials and equipment such as anti-static floors, anti-static mats, anti-static gloves, anti-static clothing, etc. \n\n2. use anti-static grounding devices to conduct static electricity to the ground when loading and unloading oil. \n\n3. installing anti-static devices such as anti-static tanks, anti-static pumps, etc., in the tanker holds \n\n4. installing anti-static coatings in tanker holds, e.g. anti-static coatings, anti-static paints, anti-static coatings, etc. \n\n5. Installation of anti-static piping and tanks in the tanker's hold to minimize the accumulation of static electricity. \n\n6. installing anti-static equipment such as anti-static pumps, anti-static valves, etc. in the tanker's hold to minimize the generation of static electricity. \n\n7. install anti-static grounding devices in the tanker cabins to channel static electricity to the ground. \n\nSummary, static electricity is a very important issue in tanker transportation, and appropriate measures must be taken to prevent the generation and accumulation of static electricity. |
+| How to use radar correctly for collision avoidance?                                   | Radar is a very important navigational tool on board a ship to help the crew identify other ships, obstacles and dangerous areas. When navigating at sea, it is very important to use radar correctly for collision avoidance. Here are some tips for using radar for collision avoidance:\n\n1. Set the proper radar range: the radar range should be set according to the size of the ship and its surroundings. If the ship is too small, the radar range should be set to a smaller range to minimize interference and errors. \n\n2. monitor the radar screen: during the voyage, the crew should always monitor the radar screen to stay alert. If other vessels or obstacles are detected, immediate action should be taken. \n\n3. recognizing targets: on the radar screen, the crew should be able to recognize other vessels or obstacles. This can be done by observing the echoes on the radar screen. If the target is too far away, the crew should try to increase the radar range to better identify the target. \n\n4. Calculating Distance and Speed: The crew should be able to calculate the distance and speed of other vessels or obstacles from themselves. This can be done by looking at the distance and speed information on the radar screen. \n\n5. take action: if another vessel or obstacle is sighted, the crew should take immediate action. This may include changing course, speed or distance from the target. The crew should always be alert and ready to take action. \n\n In conclusion, the proper use of radar for collision avoidance requires good observation and judgment on the part of the crew. The crew should always be alert and ready to act at all times. |
+| What is a VTS (Vessel Traffic Service) system and what is its role in maritime safety? | A VTS (Vessel Traffic Service) system is a system used to monitor and manage vessel traffic. It uses radar, IS (Automatic Identification System) and other sensors to track information such as a ship's position, heading and speed, and to provide real-time ship traffic information and advice.VTS systems can help ships to avoid collisions, optimize the flow of ship traffic, improve ship safety and reduce emissions. In addition, VTS systems can provide assistance and rescue services in emergency situations. |
 
-#### 评测结果
 
-|     模型      | 参数量 |  准确度  |
-| :-----------: | :----: | :------: |
-| Baichuan-Chat |   7B   |   37.4   |
-|   ChatGLM3    |   6B   |   34.5   |
-|   Qwen-Chat   |   7B   |   37.6   |
-|   Atom-Chat   |   7B   |   31.2   |
-|   Zh-MT-LLM   |   6B   | **41.0** |
+## Model evaluation ##
 
-​																		表2：客观题评测结果
+In order to more comprehensively compare the performance difference between the Zhenghe Maritime Large Language Model (Zh-MT-LLM) and the General Domain Large Language Model within the maritime domain. We constructed two evaluation datasets, Zh-eval-opt and Zh-eval-qa, from two perspectives, objective and subjective questions.
 
-### 主观题评测
+### Objective question evaluation
 
-​	Zh-eval-qa 数据量为2000。包含海事法律法规问答600道，海事教育培训600道，海事专业知识问答800道。主观题评测我们使用 GPT-3.5-Turbo 自动评测的方式来对比模型性能。
+The Zh-eval-opt objective question assessment dataset contains 800 multiple choice questions. The questions cover as wide a range of specialties in the maritime field as possible, and also include questions related to crew training. We use Accuracy to compare the performance of the model on this dataset.
 
-​	自动评测以参考资料作为基准答案，对各个模型给出的答案从完整性、准确性和条理清晰与否三个角度进行评分，分数区间为1-5分。综合得分按照 $0.4*准确性+0.3*（完整性+清晰度）$的方式进行计算。
+#### EvaluationResults
 
-#### 评测结果
+|    Models     | Parametric Quantity |   Acc    |
+| :-----------: | :-----------------: | :------: |
+| Baichuan-Chat |         7B          |   37.4   |
+|   ChatGLM3    |         6B          |   34.5   |
+|   Qwen-Chat   |         7B          |   37.6   |
+|   Atom-Chat   |         7B          |   31.2   |
+|   Zh-MT-LLM   |         6B          | **41.0** |
 
-|     模型      | 参数量 |  准确性  |  完整性  |  清晰度  | 综合得分 |
+​													Table 1: Results of Objective Question Assessment
+
+### Subjective evaluations
+
+Zh-eval-qa has a data size of 2000. contains 600 questions and answers on maritime laws and regulations, 600 questions and answers on maritime education and training, and 800 questions and answers on maritime professional knowledge. The subjective questions are evaluated using GPT-3.5-Turbo automated evaluation to compare the model performance.
+
+The automated assessment uses the reference material as the baseline answer and scores the answers given by each model in terms of completeness, accuracy, and clarity of organization or lack thereof, with a score range of 1-5. The composite score was calculated as $0.4*accuracy + 0.3*(completeness + clarity)$.
+
+#### Evaluation Results
+
+| Models | Parametric Quantity | Accuracy | Completeness | Clarity | Composite Score |
 | :-----------: | :----: | :------: | :------: | :------: | :------: |
-| Baichuan-Chat |   7B   |   4.06   |   3.67   |   4.14   |   3.97   |
-|   ChatGLM3    |   6B   |   4.09   |   3.65   | **4.16** |   3.98   |
-|   Qwen-Chat   |   7B   |   3.37   |   3.34   |   3.60   |   3.43   |
-|   Atom-Chat   |   7B   |   3.97   |   3.52   |   3.88   |   3.81   |
-|   Zh-MT-LLM   |   6B   | **4.32** | **3.82** |   4.13   | **4.11** |
+| Baichuan-Chat | 7B | 4.06 | 3.67 | 4.14 | 3.97 |
+| ChatGLM3 | 6B | 4.09 | 3.65 | **4.16** | 3.98 |
+| Qwen-Chat | 7B | 3.37 | 3.34 | 3.60 | 3.43 |
+| Atom-Chat | 7B | 3.97 | 3.52 | 3.88 | 3.81 |
+| Zh-MT-LLM | 6B | **4.32** | **3.82** | 4.13 | **4.11** |
 
-​																		表3：主观题评测结果
+​														 Table 2: Results of the subjective assessment														
 
-## 推理和部署
+## Reasoning and deployment
 
-1. 下载本仓库内容至本地/远程服务器
+1. Download the contents of this repository to a local/remote server
 
-```shell
+```
 git clone https://github.com/ITRECLab/Zh-MT-LLM.git
 ```
 
-2. 创建conda环境
+2. Creation of a conda environment
 
 ```shell
 conda create --name zh-mt-llm python=3.9
 conda activate zh-mt-llm
 ```
 
-3. 安装依赖
+3. Installation of dependencies
 
 ```shell
 cd Zh-MT-LLM
 pip install -r requirements.txt
 ```
 
-4. 下载 [全参模型权重](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)，如果本地有 ChatGLM3-6b-base 模型可以选择下载 [LoRA模型权重](https://huggingface.co/ZhangFuXi/Zh-MT-LLM/tree/main/Zh-MT-LLM-lora)
-5. 使用如下代码进行推理：
+4. Download [Full parametric model weights](https://huggingface.co/ZhangFuXi/Zh-MT-LLM) and optionally [LoRA model weights](https://huggingface.co/ZhangFuXi/Zh-MT-LLM/tree/main/Zh-MT-LLM-lora) if there is a local ChatGLM3-6b-base model weight.
+
+5. Use the following code for reasoning:
 
 ```python
 import torch
@@ -129,16 +135,16 @@ from transformers import AutoModelForCausalLM, AutoTokenizer,AutoModel
 from peft import PeftModel
 # Argument Parser Setup
 parser = argparse.ArgumentParser()
-parser.add_argument("--model", type=str, default="ZhangFuXi/Zh-MT-LLM",
+parser.add_argument("---model", type=str, default="ZhangFuXi/Zh-MT-LLM",
                     help="The directory of the model")
-parser.add_argument("--tokenizer", type=str, default="ZhangFuXi/Zh-MT-LLM", help="Tokenizer path")
+parser.add_argument("---tokenizer", type=str, default="ZhangFuXi/Zh-MT-LLM", help="Tokenizer path")
 parser.add_argument("--adapter", type=str, default=None,
                     help="Path to the LoRA model checkpoint")
 args = parser.parse_args()
 
-if args.tokenizer is None:
+if args.tokenizer is None: if args.tokenizer is None.
     args.tokenizer = args.model
-# 加载model
+# Load the mod
 model = AutoModelForCausalLM.from_pretrained(
     args.model,
     trust_remote_code=True,
@@ -146,30 +152,35 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16,
     device_map='auto'
 )
-# 加载adapter
-if args.adapter is not None:
+# Load adapter
+if args.adapter is not None: if args.adapter is not None.
     model = PeftModel.from_pretrained(model, args.adapter)
-# 加载tokenizer
+# Load tokenizer
 tokenizer = AutoTokenizer.from_pretrained(args.tokenizer, trust_remote_code=True)
 model = model.eval()
-meta_instruction = "你是ITREC实验室开发的郑和，一个海事领域的专家。请为用户尽可能地提供帮助。注意用词的安全性，不要做任何违法的事情。\n"
-user_input = "你好。"
+meta_instruction = "You are Zheng He, ITREC Lab Development, an expert in the maritime field. Please provide as much help as possible to the users. Be careful to use safe words and don't do anything illegal. \n"
+user_input = "Hello."
 prompt = meta_instruction + user_input
 response, history = model.chat(tokenizer, prompt, history=None)
 print(response)
+``
+
+
 ```
 
 
 
-## 模型训练
+## Model training ##
 
-郑和海事大模型（Zh-MT-LLM）选择 [ChatGLM3-6B-base](https://github.com/THUDM/ChatGLM3) 作为基座模型，该模型具有在 10B 以下的基础模型中最强的性能。 为了有效改善模型效果并且有较高的微调效率，我们选择使用 QLoRA 在 2*A800GPU 上进行指令微调。微调代码参考[Firefly](https://github.com/yangjianxin1/Firefly)项目执行以下命令：
+The Zhenghe Maritime Large Language Model (Zh-MT-LLM) selects [ChatGLM3-6B-base](https://github.com/THUDM/ChatGLM3) as the base model, which has the strongest performance among the base models below 10B. In order to improve the model results and have high fine-tuning efficiency, we chose to use QLoRA to perform instruction fine-tuning on 2*A800GPUs. The fine-tuning code refers to the [Firefly](https://github.com/yangjianxin1/Firefly) project to execute the following commands:
 
 ```shell
 torchrun --nproc_per_node=2 train_qlora.py --train_args_file train_args/qlora/chatglm3-6b-sft-qlora.json
 ```
 
-微调使用的主要参数如下：
+
+
+The main parameters used for fine tuning are as follows:
 
 ```json
 { 
@@ -188,56 +199,57 @@ torchrun --nproc_per_node=2 train_qlora.py --train_args_file train_args/qlora/ch
     "weight_decay": 0,
     "max_grad_norm": 0.3,
 }
+``
 ```
 
+​																
 
+## Training data
 
-## 训练数据
+The training data use the maritime domain data Zh-mt-sft organized for three main segments, and 30w general conversation data [moss-003-sft-data](https://huggingface.co/datasets/fnlp/moss-003-sft-data). Zh-mt-sft specifically Contains CrimeKgAssitant-1.8w, Zh-law-qa, and Zh-law-court related to maritime laws and regulations Q&A, Zh-edu-qa and Zh-edu-qb related to maritime education and training, and Zh-mt-qa related to maritime specialized knowledge Q&A.
 
-​	训练数据使用面向三大板块组织的海事领域数据 Zh-mt-sft，以及30w条通用对话数据 [moss-003-sft-data](https://huggingface.co/datasets/fnlp/moss-003-sft-data)。Zh-mt-sft具体包含海事法律法规问答相关的 CrimeKgAssitant-1.8w、Zh-law-qa、Zh-law-court，海事教育培训相关的Zh-edu-qa、Zh-edu-qb，以及海事专业知识问答相关的 Zh-mt-qa。
+The instruction fine-tuning dataset Zh-mt-sft is constructed as follows:
 
-Zh-mt-sft构造方法如下：
+#### Maritime Laws and Regulations Q&A
 
-#### 海事法律法规问答
+The Maritime Laws and Regulations Q&A section contains a total of three services:
 
-​	海事法律法规问答板块共包含有三种服务：
+- Consultation on Maritime Laws and Regulations
+- The Court found that
+- Judgement projections
 
-- 海事法律法规咨询
-- 法院认为
-- 判决预测
+In order to provide consulting services on the laws and regulations that characterize the maritime domain, this project collected a total of **1.4w** maritime-related laws and regulations, covering international conventions, maritime laws, documents of the State Council, documents of ministries and commissions, administrative regulations, documents of the Maritime Safety Administration, and documents of judicial interpretations, and so on. Based on the information collected above, we designed and iterated the prompt words, and generated a total of **5.9w** maritime laws and regulations advisory data using **GPT-3.5-Turbo **. From these, we extracted **1.3k** pieces of legal advice data involving maritime law, which were rewritten by maritime law professionals to align human preferences while enhancing the professionalism of the responses. In addition, we cleaned and filtered **1.8w** pieces of higher quality data from the **CrimeKgAssitant** dataset of legal advice in real-world scenarios to increase the generalizability of legal advice.
 
-​	为提供海事领域特色的法律法规咨询服务，本项目收集了共计**1.4w**条海事相关的法律法规，涵盖了国际公约、海事类法律、国务院文件、部委文件、行政法规、海事局文件以及司法解释文件等内容。基于以上收集的信息，我们设计并迭代了提示词，使用 **GPT-3.5-Turbo **生成了共计**5.9w**条海事法律法规咨询数据。我们从其中抽取了**1.3k**条涉及海商法的法律咨询数据，由海商法专业人员进行改写，在提升回复专业性的同时对齐了人类偏好。另外，我们从 **CrimeKgAssitant** 真实场景下法律咨询数据集中，清洗并筛选出**1.8w**条质量较高的数据，来增加法律咨询的通用性。
+The court opinion and judgment prediction part totaled **5.6k** pieces of data, collected from real judicial cases related to maritime affairs in the NLM website. The case information description part is intercepted as the input, and the content of court opinion and court judgment are used as the output of the two operations respectively.
 
-​	法院认为和判决预测部分共计**5.6k**条数据，收集自北大法宝网中海事相关的真实司法案例。截取其中案件信息描述部分作为输入，法院认为和法院判决内容分别作为两个业务的输出。
+#### Maritime Education and Training
 
-#### 海事教育培训
+Maritime education and training consists of two major services:
 
-​	海事教育培训包含两大服务内容：
+- Maritime Specialty Question Bank
+- Maritime Education Counseling
 
-- 海事专业题库
-- 海事教育咨询
+Maritime professional question bank collected from the network as well as the school of all kinds of maritime-related professional question bank, which contains a part of the online collection of crew certification related test questions, a total of **2.3w** articles.
 
-​    海事专业题库收集自网络以及校内的各类海事相关专业题库，其中包含一部分从网上收集的船员考证相关试题，共计**2.3w**条。
+The Maritime Education Consultancy Service provides specialized knowledge-related educational consultancy services for various types of trainers in the maritime field and maritime students. The data comes from three parts: in the first part, we collected the examination syllabi for trainers in the maritime field, such as the Examination Syllabus for Seafarers and the Examination Syllabus for Persons Engaged in the Carriage of Dangerous Goods by Vessel in and out of Ports and Declarations. Based on the knowledge points in the syllabus, we designed and iterated the cue words and generated **2.2w** pieces of data using GPT-3.5-Turbo. In the second part, we collected a total of **1k** pieces of high-quality crew general knowledge quiz data from the Internet. In the third part, we rewrote a part of the questions in the question bank involving specialized knowledge into an advisory form using GPT-3.5-Turbo and filtered out **1.6w** pieces of high-quality data to increase the specialized knowledge in the maritime domain in the advisory data.
 
-​	海事教育咨询服务面向海事领域各类培训人员以及海事专业学生，提供专业知识相关的教育咨询服务。数据来源于三部分：第一部分，我们收集了海事领域培训人员考试大纲，例如《海船船员考试大纲》、《从事船舶载运危险货物进出港口申报人员考试大纲》。根据大纲中的知识点，我们设计并迭代了提示词，使用 GPT-3.5-Turbo 生成了**2.2w**条数据。第二部分，我们从网络上收集了高质量的船员职业常识问答数据共计**1k**条。第三部分，我们将题库中一部分涉及专业知识的试题，使用 GPT-3.5-Turbo 改写为了咨询形式，并筛选出其中**1.6w**条高质量数据，来增加咨询数据中的海事领域专业知识。
+#### Maritime Expertise Q&A
 
-#### 海事专业知识问答
+For this part of the data we first designed and iterated the cue words using two methods to obtain the data, one in the form of GPT-3.5-Turbo self-questioning and one in the form of GPT-3.5-Turbo asking questions that GPT-4.0-Turbo answers. For the **7.2w** pieces of data generated through the above two methods, we retained **4.6w** pieces of high-quality data for fine-tuning after cleaning and filtering.
 
-​	对于该部分数据我们首先设计并迭代了提示词，使用两种方法来获取数据，一种是GPT-3.5-Turbo自问自答的形式，一种是GPT-3.5-Turbo提问GPT-4.0-Turbo解答的形式。对于通过以上两种方式生成出的**7.2w**条数据，我们通过清洗和筛选后保留了**4.6w**条高质量数据用于微调。
-
-以上数据集具体统计信息如下：
+The specific statistics of the dataset used for the above training are as follows:
 
 <table>
     <tbody style="text-align: center;">
     <tr>
-        <th>服务板块</th>
-        <th>子任务</th>
-        <th>数据集</th>
-        <th>数据量</th>
+        <th>Service Board</th>
+        <th>Subtasks</th>
+        <th>Data sets</th>
+        <th>Data volume</th>
     </tr>
     <tr>
-        <td rowspan="4">海事法律法规问答</td>
-        <td rowspan="2">海事法律咨询</td>
+        <td rowspan="4">Questions and Answers on Maritime Laws and Regulations</td>
+        <td rowspan="2">Maritime Legal Advice</td>
         <td>CrimeKgAssitant </td>
         <td>18,279</td>
     </tr>
@@ -246,89 +258,90 @@ Zh-mt-sft构造方法如下：
         <td>59,244</td>
     </tr>
     <tr>
-        <td>法院认为</td>
+        <td>The Court held</td>
         <td>Zh-law-court</td>
         <td>2,684</td>
     </tr>
     <tr>
-        <td>判决预测</td>
+        <td>Sentence projections</td>
         <td>Zh-law-predict</td>
         <td>3,004</td>
     </tr>
     <tr>
-        <td rowspan="2">海事教育培训</td>
-        <td>海事教育咨询</td>
+        <td rowspan="2">Maritime education and training</td>
+        <td>Maritime Education Counseling</td>
         <td>Zh-edu-qa</td>
         <td>41,052</td>
     </tr>
     <tr>
-        <td>海事专业题库</td>
+        <td>Maritime Specialization Question Bank</td>
         <td>Zh-edu-qb</td>
         <td>23,531</td>
     </tr>
     <tr>
-        <td rowspan="4">海事专业知识问答</td>
-        <td>船舶知识</td>
+        <td rowspan="4">Questions and Answers on Maritime Expertise</td>
+        <td>Ship Knowledge</td>
         <td rowspan="4">Zh-mt-qa</td>
         <td rowspan="4">46,759</td>
     </tr>
         <tr>
-        <td>航海知识</td>
+        <td>Navigational Knowledge</td>
     </tr>
         <tr>
-        <td>港口知识</td>
+        <td>Port knowledge</td>
     </tr>
         <tr>
-        <td>海洋知识</td>
+        <td>Marine knowledge</td>
     </tr>
         <tr>
-        <td rowspan="1">通用对话</td>
+        <td rowspan="1">Generic Dialogue</td>
         <td></td>
         <td>moss-003-sft-data</td>
         <td>300,000</td>
     </tr>
         <tr>
-        <td>总计</td>
+        <td>Total</td>
         <td colspan="3">494,553</td>
     </tr>
     </tbody>
 </table>
 
-指令数据资源以及郑和大模型技术手稿正在整理和完善，相关资源将陆续发布。
+​																	Table 3: Training data statistics
 
-## 声明
+## Declaration
 
-由于模型参数量限制、训练数据的清洗程度等因素，本项目开源的模型可能存在以下局限性：
+Due to factors such as the limitation of the number of model parameters and the degree of cleaning of the training data, the model open source in this project may have the following limitations:
 
-- 由于未经过无害化微调，可能会产生歧视、危害、违背伦理道德的言论。
-- 由于缺乏对真实世界的准确理解，模型可能会产生幻觉性回复，误导用户。
-- 模型的训练数据可能包含有偏见的数据，用户应谨慎处理模型回应中的潜在偏见问题。
+- Because it has not been harmlessly fine-tuned, it may result in discriminatory, harmful and unethical statements.
+- Lacking an accurate understanding of the real world, the model may produce hallucinatory responses that mislead the user.
+- The model's training data may contain biased data, and users should be cautious about potential bias in model responses.
 
-- 由于模型参数量受限，可能无法涵盖所有领域的知识，导致在某些主题上的回复不够准确或完整。
+- Due to the limited number of model parameters, it may not be possible to cover all areas of knowledge, resulting in less accurate or complete responses on some topics.
 
-- 在处理特定领域的事实性知识时，模型可能因信息不足或误解而提供错误的答案，导致误导或混淆。
+- When dealing with factual knowledge in a specific domain, models may provide incorrect answers due to insufficient information or misinterpretation, leading to misinformation or confusion.
 
-鉴于以上模型的局限性，我们要求本项目的代码、数据、模型不得用于对社会造成危害的用途，并且必须遵循基座模型的[MODEL_LICENCE](https://github.com/THUDM/ChatGLM3/blob/main/MODEL_LICENSE)。 我们不对因使用 Zh-MT-LLM 所引发的任何问题、风险或不良后果承担责任。 
+Given the limitations of the above model, we request that the code, data, and model of this project not be used for socially harmful purposes and must follow the [MODEL_LICENCE](https://github.com/THUDM/ChatGLM3/blob/main/MODEL_LICENSE) of the base model. We are not responsible for any problems, risks, or adverse consequences arising from the use of Zh-MT-LLM.
 
-## 开发团队
+## Development team
 
-郑和海事大模型（Zh-MT-LLM）由大连海事大学智能技术实验室（ITREC）大模型项目组开发。
+Zheng He Maritime Large Language Model (Zh-MT-LLM) is developed by the Large Language Model Project Team of Intelligent Technology Laboratory (ITREC) of Dalian Maritime University.
 
-指导教师：张益嘉
+Instructors: Yijia Zhang, Mingyu Lu, Guoqiang Li, Houqun Xing
 
-学生成员：张富玺、付生博、周一鸣、万秉宇、张峻玮、李松涛、张诗笛、王世龙、程俊凯、尹伟鸣、裴清华、李晓博、赵启雲、朴承权、孙伟豪 、李振鑫、王锦帆 、姜宇凡、孙林、关金筑、苌帅、马子怡、王畅、陈帅
+Student members: Fuxi Zhang, Shengbo Fu, Yiming Zhou , Bingyu Wan , Junwei Zhang , Songtao Li , Shidi Zhang, Shilong Wang , Junkai Cheng , Weiming Yin , Qinghua  Pei , Xiaobo Li , Qiyun Zhao , Chengquan Pu, Weihao Sun , Zhenxin Li , Jinfan Wang , Yufan  Jiang , Lin Sun , Jinzhu Guan , Shuai Chang, Ziyi Ma , Chang Wang, Shuai Chen 
 
-合作邮箱：zhangyijia@dlmu.edu.cn
+Cooperation e-mail: zhangyijia@dlmu.edu.cn
 
-## 致谢
+## Acknowledgements
 
-感谢北京华夏电通科技股份有限公司大连分公司、大连海事大学信息科学技术学院高性能计算中心提供的支持和帮助，同时感谢以下开源项目对本项目的启发和帮助：
+Ltd. Dalian Branch, and the High Performance Computing Center of the School of Information Science and Technology, Dalian Maritime University for their support and help, as well as the following open source projects for their inspiration and help with this project:
 
-- https://github.com/THUDM/ChatGLM3
-- https://github.com/DUTIR-BioNLP/Taiyi-LLM
-- https://github.com/yangjianxin1/Firefly
-- https://github.com/FudanDISC/DISC-LawLLM
-- https://github.com/liuhuanyong/CrimeKgAssitant
+- [ChatGLM3](https://github.com/THUDM/ChatGLM3)
+- [Taiyi](https://github.com/DUTIR-BioNLP/Taiyi-LLM)
+- [Firefly](https://github.com/yangjianxin1/Firefly)
+- [DISC-LawLLM](https://github.com/FudanDISC/DISC-LawLLM)
+- [CrimeKgAssitant](https://github.com/liuhuanyong/CrimeKgAssitant)
+- This project Logo was generated by DALL-E 3 and then manually modified.
 
 ## Star History
 

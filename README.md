@@ -83,7 +83,7 @@ Zh-eval-opt 客观题评测数据集包含800道选择题。题目内容尽可�
 |   Atom-Chat   |   7B   |   31.2   |
 |   Zh-MT-LLM   |   6B   | **41.0** |
 
-​																		表2：客观题评测结果
+​																		表1：客观题评测结果
 
 ### 主观题评测
 
@@ -101,7 +101,7 @@ Zh-eval-qa 数据量为2000。包含海事法律法规问答600道，海事教�
 |   Atom-Chat   |   7B   |   3.97   |   3.52   |   3.88   |   3.81   |
 |   Zh-MT-LLM   |   6B   | **4.32** | **3.82** |   4.13   | **4.11** |
 
-​																		表3：主观题评测结果
+​																		表2：主观题评测结果
 
 ## 推理和部署
 
@@ -300,6 +300,8 @@ torchrun --nproc_per_node=2 train_qlora.py --train_args_file train_args/qlora/ch
     </tbody>
 </table>
 
+​																			表3：训练数据统计信息
+
 ## 声明
 
 由于模型参数量限制、训练数据的清洗程度等因素，本项目开源的模型可能存在以下局限性：
@@ -333,7 +335,7 @@ torchrun --nproc_per_node=2 train_qlora.py --train_args_file train_args/qlora/ch
 - [Firefly](https://github.com/yangjianxin1/Firefly)
 - [DISC-LawLLM](https://github.com/FudanDISC/DISC-LawLLM)
 - [CrimeKgAssitant](https://github.com/liuhuanyong/CrimeKgAssitant)
-- 本项目Logo由DALL·E 3生成后，经过人工修改制作完成。
+- 本项目的Logo 由DALL·E 3初步生成后， 经过人工修改得到 。
 
 ## Star History
 
