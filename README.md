@@ -197,7 +197,7 @@ torchrun --nproc_per_node=2 train_qlora.py --train_args_file train_args/qlora/ch
 
 训练数据使用面向三大板块组织的海事领域数据 Zh-mt-sft，以及30w条通用对话数据 [moss-003-sft-data](https://huggingface.co/datasets/fnlp/moss-003-sft-data)。Zh-mt-sft具体包含海事法律法规问答相关的 CrimeKgAssitant-1.8w、Zh-law-qa、Zh-law-court，海事教育培训相关的Zh-edu-qa、Zh-edu-qb，以及海事专业知识问答相关的 Zh-mt-qa。
 
-Zh-mt-sft 的构造方法如下：
+指令微调数据集Zh-mt-sft 的构造方法如下：
 
 #### 海事法律法规问答
 
