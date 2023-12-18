@@ -1,10 +1,10 @@
 <div align="center">
 
-[ZH](. /README.md)| EN
+[ZH](./README.md)| EN
 
-<h1>Zhenghe Maritime Large Language Model (Zh-MT-LLM)</h1>
+<h1>Zheng He Maritime Large Language Model (Zh-MT-LLM)</h1>
 
-![Zh-logo](imgs/zh4.png)
+![Zh-logo](README-en.assets/zh4.png)
 
 [![Static Badge](https://img.shields.io/badge/license-Apache%202.0-royalblue)](./LICENSE)
 [![Static Badge](https://img.shields.io/badge/%F0%9F%A4%97-Huggingface-royalblue)](https://huggingface.co/ZhangFuXi/Zh-MT-LLM)
